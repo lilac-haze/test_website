@@ -17,58 +17,55 @@
         <article>
             <h1> Slider </h1>
             <p>
+                <div class="wrapper">
+                    <button class="btn btn-prev" onclick="prevSlide()"><i class="material-icons">chevron_left</i></button>
+                    <button class="btn btn-next" onclick="nextSlide()"><i class="material-icons">chevron_right</i></button>
+                    <div id="mySlider"></div>
+                <div id="circles"></div>
+                <style>
+                    button:focus{outline: none}
+                    .wrapper{
+                        position: relative;
+                        top: 0;
+                        left: 0;
+                    }
+                    .btn{
+                        z-index: 999;
+                        position: absolute;
+                        top: calc(50% - (50px/2));
+                        margin: 10px;
+                        border: none;
+                    }
+                    .material-icons{
+                        margin-top: 3px;
+                        font-size: 36px;
+                    }
+                    .btn-prev .material-icons{margin-left: -3px;}
+                    .btn-next .material-icons{margin-right: -3px;}
 
-                <section id="slider_bl">
-                    <div class="wrapper">
-                      <input checked type=radio name="slider" id="slide1" />
-                      <input type=radio name="slider" id="slide2" />
-                      <input type=radio name="slider" id="slide3" />
-                      <input type=radio name="slider" id="slide4" />
-                      <div class="slider-wrapper">
-                        <div class=inner>
-                          <article>
-                            <div class="info top-left">
-                              <h3>Слайдер 1</h3></div>
-                            <img src="D:\универ\web\test_website_1\public\images\1.jpg" />
-                          </article>
-                          <article>
-                            <div class="info bottom-right">
-                              <h3>Слайдер 2</h3></div>
-                            <img src="D:\универ\web\test_website_1\public\images\2.jpg" />
-                          </article>
-                          <article>
-                            <div class="info bottom-left">
-                              <h3>Слайдер 3</h3></div>
-                            <img src="D:\универ\web\test_website_1\public\images\3.jpg" />
-                          </article>
-                          <article>
-                            <div class="info top-right">
-                              <h3>Слайдер 4</h3></div>
-                            <img src="D:\универ\web\test_website_1\public\images\4.jpg" />
-                          </article>
-                        </div>
-                      </div>
-                      <div class="slider-prev-next-control">
-                        <label for=slide1></label>
-                        <label for=slide2></label>
-                        <label for=slide3></label>
-                        <label for=slide4></label>
-                      </div>
-                      <div class="slider-dot-control">
-                        <label for=slide1></label>
-                        <label for=slide2></label>
-                        <label for=slide3></label>
-                        <label for=slide4></label>
-                      </div>
-                    </div>
-                </section>
-                
+                    .btn-next{right: 0;}
 
-
-
-
-
-
+                    .dot{
+                        width: 20px;
+                        height: 20px;
+                        display: block;
+                        margin: 10px;
+                        background-color: #4ca74c;
+                        opacity: .3;
+                    }
+                    .dot_active{
+                        opacity: 1;
+                        background-color: #4ca74c;
+                    }
+                    .dot span{
+                        display: none;
+                    }
+                    #circles{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                    }
+                </style>
 
             </p>
         </article>
@@ -99,6 +96,7 @@
 </div>
 <div class= "footer-wrapper" >
     <footer class= "footer" ><p> Footer... </p></footer>
+    <script src="assets/js/script.js"></script>
 </div>
 </body>
 </html>
